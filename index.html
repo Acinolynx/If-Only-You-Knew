@@ -8,22 +8,21 @@
       href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
       rel="stylesheet"
     />
-    <script src="https://code.createjs.com/preloadjs/1.0.1/preloadjs.min.js"></script>
+    <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <link rel="icon" type="image/x-icon" href="/Asset/tulip1.png" />
   </head>
   <body>
     <div id="loading-screen">
-      <div id="particles-js"></div>
+      <div id="loading-particles"></div>
       <img src="Asset/tulip1.png" alt="Loading..." />
       <div id="progress-bar-container">
         <div id="progress-bar"></div>
       </div>
     </div>
 
-    <div id="particles-js"></div>
-
     <div id="content" style="display: none">
+      <div id="game-particles"></div>
       <!-- Splash Screen -->
       <div id="splash-screen">
         <button id="enter-game">Lanjutkan</button>
@@ -51,44 +50,7 @@
     <audio id="bgm" src="/Asset/loveletter.mp3" loop></audio>
 
     <script src="preload.js"></script>
+    <script src="particles.js"></script>
     <script src="script.js"></script>
-
-    <script>
-      particlesJS("particles-js", {
-        particles: {
-          number: {
-            value: 50,
-            density: { enable: true, value_area: 800 },
-          },
-          color: { value: "#ffcaca" },
-          shape: {
-            type: "circle",
-            stroke: { width: 0, color: "#000000" },
-          },
-          opacity: {
-            value: 0.5,
-            random: true,
-          },
-          size: {
-            value: 5,
-            random: true,
-          },
-          move: {
-            enable: true,
-            speed: 1,
-            direction: "none",
-            out_mode: "out",
-          },
-        },
-        interactivity: {
-          detect_on: "canvas",
-          events: {
-            onhover: { enable: false },
-            onclick: { enable: false },
-          },
-        },
-        retina_detect: true,
-      });
-    </script>
   </body>
 </html>

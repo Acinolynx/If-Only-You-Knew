@@ -212,13 +212,14 @@ button {
 /* ========================= */
 /* ====== PARTICLES ======= */
 /* ========================= */
-#particles-js {
-  position: fixed;
+#loading-particles,
+#game-particles {
+  position: fixed; /* Biar menempel di layar */
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  z-index: -1; /* Biar ada di belakang konten */
 }
 
 /* ========================= */
@@ -254,7 +255,7 @@ button {
 }
 
 #progress-bar-container {
-  width: 5%;
+  width: 10%;
   height: 10px;
   background-color: #372948;
   border-radius: 5px;
@@ -266,19 +267,6 @@ button {
   height: 100%;
   background-color: #ffcaca;
   border-radius: 5px;
-}
-
-#particles-js {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #251b37;
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
 }
 
 /* ========================= */
@@ -323,5 +311,9 @@ button {
   .menu-video,
   #expression-video {
     width: 80%;
+  }
+
+  #progress-bar-container {
+    width: 30%;
   }
 }

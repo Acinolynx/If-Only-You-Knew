@@ -15,6 +15,13 @@ function preload() {
   });
   queue.loadManifest([
     { id: "present", src: "Asset/present.png" },
+    { id: "present1", src: "Asset/present1.png" },
+    { id: "present2", src: "Asset/present2.png" },
+    { id: "present3", src: "Asset/present3.png" },
+    { id: "present4", src: "Asset/present4.png" },
+    { id: "present5", src: "Asset/present5.png" },
+    { id: "loveletter", src: "Asset/loveletter.mp3" },
+    { id: "typ", src: "Asset/type.mp3" },
     { id: "tulip1", src: "Asset/tulip1.png" },
     { id: "tulip2", src: "Asset/tulip2.png" },
     { id: "agh", src: "img/agh.mp4" },
@@ -59,38 +66,6 @@ function preload() {
 
 preload();
 
-particlesJS("particles-js", {
-  particles: {
-    number: {
-      value: 50,
-      density: { enable: true, value_area: 800 },
-    },
-    color: { value: "#ffcaca" },
-    shape: {
-      type: "circle",
-      stroke: { width: 0, color: "#000000" },
-    },
-    opacity: {
-      value: 0.5,
-      random: true,
-    },
-    size: {
-      value: 5,
-      random: true,
-    },
-    move: {
-      enable: true,
-      speed: 1,
-      direction: "none",
-      out_mode: "out",
-    },
-  },
-  interactivity: {
-    detect_on: "canvas",
-    events: {
-      onhover: { enable: false },
-      onclick: { enable: false },
-    },
-  },
-  retina_detect: true,
-});
+function onAssetsLoaded() {
+  document.dispatchEvent(new Event("assetsLoaded"));
+}

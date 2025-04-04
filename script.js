@@ -13,6 +13,39 @@ menuVideo.volume = 0.2;
 bgm.volume = 0.5;
 
 document.addEventListener("DOMContentLoaded", function () {
+  particlesJS("loading-particles", {
+    particles: {
+      number: { value: 50 },
+      size: { value: 3 },
+    },
+  });
+
+  particlesJS("game-particles", {
+    particles: {
+      number: { value: 80 },
+      size: { value: 4 },
+    },
+  });
+});
+
+document.addEventListener("assetsLoaded", function () {
+  let loadingParticles = document.getElementById("loading-particles");
+
+  // Tambahkan efek fade-in
+  loadingParticles.classList.add("fade-in");
+
+  // Setelah 1 detik (opsional, biar efek muncul dulu), mulai fade-out
+  setTimeout(() => {
+    loadingParticles.classList.add("fade-out");
+
+    // Setelah animasi selesai, sembunyikan elemen
+    setTimeout(() => {
+      loadingParticles.style.display = "none";
+    }, 1000);
+  }, 1000); // Durasi fade-in sebelum fade-out dimulai
+});
+
+document.addEventListener("DOMContentLoaded", function () {
   const bgm = document.getElementById("bgm");
 
   function playBGM() {
@@ -392,3 +425,13 @@ enterGameButton.addEventListener("click", enterMainMenu);
 startButton.addEventListener("click", startGame);
 showSplashScreen();
 showSplashTextSequence();
+
+window.onload = function () {
+  initLoadingParticles(); // Panggil partikel loading
+
+  setTimeout(() => {
+    document.getElementById("loading-screen").style.display = "none";
+    document.getElementById("content").style.display = "block";
+    initGameParticles(); // Panggil partikel game setelah loading selesai
+  }, 2000); // Misalnya loading screen 2 detik
+};
