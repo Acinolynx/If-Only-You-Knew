@@ -1,29 +1,45 @@
-function allAssetsLoaded() {
-  document.getElementById("loading-screen").style.display = "none";
-  document.getElementById("content").style.display = "block";
-}
-
 function updateProgressBar(progress) {
   document.getElementById("progress-bar").style.width = progress + "%";
 }
 
+function allAssetsLoaded() {
+  // Sembunyikan loading screen dan tampilkan konten
+  document.getElementById("loading-screen").classList.add("fade-out");
+  setTimeout(() => {
+    document.getElementById("loading-screen").style.display = "none";
+    document.getElementById("content").style.display = "block";
+    document.getElementById("content").classList.add("fade-in");
+    initGameParticles?.(); // kalau ada
+    onAssetsLoaded(); // dispatch event selesai load
+  }, 500); // match sama animasi fade-out
+}
+
+function onAssetsLoaded() {
+  document.dispatchEvent(new Event("assetsLoaded"));
+}
+
 function preload() {
-  var queue = new createjs.LoadQueue(true);
-  queue.on("complete", allAssetsLoaded, this);
+  const queue = new createjs.LoadQueue(true);
+
   queue.on("progress", function (event) {
     updateProgressBar(event.progress * 100);
   });
+
+  queue.on("complete", allAssetsLoaded, this);
+
   queue.loadManifest([
+    { id: "loveletter", src: "Asset/loveletter.mp3" },
     { id: "present", src: "Asset/present.png" },
     { id: "present1", src: "Asset/present1.png" },
     { id: "present2", src: "Asset/present2.png" },
     { id: "present3", src: "Asset/present3.png" },
     { id: "present4", src: "Asset/present4.png" },
     { id: "present5", src: "Asset/present5.png" },
-    { id: "loveletter", src: "Asset/loveletter.mp3" },
-    { id: "typ", src: "Asset/type.mp3" },
     { id: "tulip1", src: "Asset/tulip1.png" },
     { id: "tulip2", src: "Asset/tulip2.png" },
+    { id: "type", src: "Asset/type.mp3" },
+
+    // MP4s (pastikan file-nya bener dan huruf besar/kecil match!)
     { id: "agh", src: "img/agh.mp4" },
     { id: "angry", src: "img/angry.mp4" },
     { id: "anoyed", src: "img/anoyed.mp4" },
@@ -64,8 +80,4 @@ function preload() {
   ]);
 }
 
-preload();
-
-function onAssetsLoaded() {
-  document.dispatchEvent(new Event("assetsLoaded"));
-}
+window.addEventListener("load", preload);
