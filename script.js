@@ -427,11 +427,61 @@ showSplashScreen();
 showSplashTextSequence();
 
 window.onload = function () {
-  initLoadingParticles(); // Panggil partikel loading
+  initLoadingParticles(); // partikel loading aktif
 
-  setTimeout(() => {
-    document.getElementById("loading-screen").style.display = "none";
-    document.getElementById("content").style.display = "block";
-    initGameParticles(); // Panggil partikel game setelah loading selesai
-  }, 2000); // Misalnya loading screen 2 detik
+  const images = Array.from(document.images);
+  const videos = Array.from(document.querySelectorAll("video"));
+
+  const totalAssets = images.length + videos.length;
+  let loadedCount = 0;
+
+  const updateProgressBar = () => {
+    loadedCount++;
+    const progress = Math.round((loadedCount / totalAssets) * 100);
+    document.getElementById("progress-bar").style.width = progress + "%";
+  };
+
+  const assetPromises = [
+    ...images.map((img) => {
+      return new Promise((resolve) => {
+        if (img.complete) {
+          updateProgressBar();
+          resolve();
+        } else {
+          img.onload = () => {
+            updateProgressBar();
+            resolve();
+          };
+        }
+      });
+    }),
+    ...videos.map((video) => {
+      return new Promise((resolve) => {
+        if (video.readyState >= 3) {
+          updateProgressBar();
+          resolve();
+        } else {
+          video.oncanplaythrough = () => {
+            updateProgressBar();
+            resolve();
+          };
+        }
+      });
+    }),
+  ];
+
+  Promise.all(assetPromises).then(() => {
+    // Fade out loading screen, fade in splash screen
+    const loadingScreen = document.getElementById("loading-screen");
+    const content = document.getElementById("content");
+
+    loadingScreen.classList.add("fade-out");
+
+    setTimeout(() => {
+      loadingScreen.style.display = "none";
+      content.style.display = "block";
+      content.classList.add("fade-in");
+      initGameParticles(); // ganti partikel
+    }, 500); // waktu fade-out
+  });
 };
