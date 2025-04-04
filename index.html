@@ -8,37 +8,49 @@
       href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
       rel="stylesheet"
     />
+    <script src="https://code.createjs.com/preloadjs/1.0.1/preloadjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <link rel="icon" type="image/x-icon" href="/Asset/tulip1.png" />
   </head>
   <body>
+    <div id="loading-screen">
+      <div id="particles-js"></div>
+      <img src="Asset/tulip1.png" alt="Loading..." />
+      <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+      </div>
+    </div>
+
     <div id="particles-js"></div>
 
-    <!-- Splash Screen -->
-    <div id="splash-screen">
-      <button id="enter-game">Lanjutkan</button>
-    </div>
+    <div id="content" style="display: none">
+      <!-- Splash Screen -->
+      <div id="splash-screen">
+        <button id="enter-game">Lanjutkan</button>
+      </div>
 
-    <!-- Main Menu -->
-    <div id="main-menu" style="display: none">
-      <video id="menu-video" class="menu-video" loop playsinline>
-        <source src="img/cute.mp4" type="video/mp4" />
-      </video>
-      <h1>If Only You Knew...</h1>
-      <button id="start-button">Buka Suratnya 💌</button>
-    </div>
+      <!-- Main Menu -->
+      <div id="main-menu" style="display: none">
+        <video id="menu-video" class="menu-video" loop playsinline>
+          <source src="img/cute.mp4" type="video/mp4" />
+        </video>
+        <h1>If Only You Knew...</h1>
+        <button id="start-button">Buka Suratnya 💌</button>
+      </div>
 
-    <!-- Game Container -->
-    <div id="game-container" style="display: none">
-      <video id="expression-video" autoplay loop playsinline></video>
-      <p id="story-text">Klik tombol di bawah untuk memulai cerita.</p>
-      <div id="choice-buttons"></div>
+      <!-- Game Container -->
+      <div id="game-container" style="display: none">
+        <video id="expression-video" autoplay loop playsinline></video>
+        <p id="story-text">Klik tombol di bawah untuk memulai cerita.</p>
+        <div id="choice-buttons"></div>
+      </div>
     </div>
 
     <div id="flower-container"></div>
 
     <audio id="bgm" src="/Asset/loveletter.mp3" loop></audio>
 
+    <script src="preload.js"></script>
     <script src="script.js"></script>
 
     <script>
