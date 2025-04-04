@@ -398,7 +398,7 @@ function createFlower() {
   flower.classList.add("flower");
   document.getElementById("flower-container").appendChild(flower);
 
-  const tulipImages = ["/Asset/tulip1.png", "Asset/tulip2.png"];
+  const tulipImages = ["Asset/tulip1.png", "Asset/tulip2.png"];
   const randomTulip =
     tulipImages[Math.floor(Math.random() * tulipImages.length)];
 
