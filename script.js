@@ -423,8 +423,6 @@ setInterval(createFlower, 400); // tiap 0.4 detik muncul bunga baru
 
 enterGameButton.addEventListener("click", enterMainMenu);
 startButton.addEventListener("click", startGame);
-showSplashScreen();
-showSplashTextSequence();
 
 window.onload = function () {
   initLoadingParticles(); // partikel loading aktif

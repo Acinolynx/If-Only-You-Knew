@@ -11,9 +11,12 @@ function allAssetsLoaded() {
     document.getElementById("content").classList.add("fade-in");
     document.getElementById("splash-screen").style.display = "block";
 
-    initGameParticles?.(); // kalau ada
-    onAssetsLoaded(); // dispatch event selesai load
-  }, 500); // match sama animasi fade-out
+    showSplashScreen();
+    showSplashTextSequence();
+
+    initGameParticles?.();
+    onAssetsLoaded();
+  }, 500);
 }
 
 function onAssetsLoaded() {
