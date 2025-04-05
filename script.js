@@ -81,7 +81,7 @@ const story = [
   },
   {
     text: "\n 📱 Jempolmu terus menggeser layar. Satu video, dua video, tiga video… semuanya tentang pasangan yang saling memberi kejutan. \n 💐 Ada yang dikasih bunga. \n 🎁 Ada yang dikasih kado di hari spesial. \n 🎂 Ada yang dirayakan ulang tahunnya dengan meriah. \n 💔 Kamu mendesah pelan. Rasanya sedikit nyesek.",
-    video: "img/sed.mp4",
+    video: "img/Sed.mp4",
     choices: [
       { text: "Huft… iri banget ya...", nextText: 3 },
       { text: "Yaudah lah… mungkin aku gak seistimewa itu.", nextText: 3 },
@@ -100,7 +100,7 @@ const story = [
   },
   {
     text: "\n 🎮 Kamu membuka game itu. Layarnya gelap sebentar, lalu muncul pesan pertama. \n 📜 'Kalau kamu tahu… ada yang selalu inget hari ini' ",
-    video: "img/o.mp4",
+    video: "img/O.mp4",
     choices: [{ text: "Ehh... Apaan nih?...", nextText: 5 }],
   },
   {
@@ -129,7 +129,7 @@ const story = [
   },
   {
     text: "\n 📜 'Kamu itu berharga.' \n 📜 'Gak peduli seberapa sering kamu ragu atau merasa gak cukup baik...' \n 📜 'Buat aku, kamu selalu cukup. Selalu lebih dari cukup.' \n 😌 Kamu menarik napas pelan. Jempolmu berhenti di atas layar.",
-    video: "img/hihi.mp4",
+    video: "img/Hihi.mp4",
     choices: [
       { text: "Kenapa kata-katanya bisa pas banget ya...", nextText: 9 },
       { text: "Aku gak tahu harus bilang apa...", nextText: 9 },
@@ -137,7 +137,7 @@ const story = [
   },
   {
     text: "\n 📜 'Aku sadar, aku gak selalu jadi yang terbaik.' \n 📜 'Kadang aku bikin kamu kesal, bikin kamu capek.' \n 📜 'Tapi aku mau kamu tahu, aku selalu berusaha. Karena aku sayang kamu.'",
-    video: "img/puyenk.mp4",
+    video: "img/Puyenk.mp4",
     choices: [
       { text: "Ya ampun, ini bikin aku mau nangis...", nextText: 10 },
       {
@@ -188,7 +188,7 @@ const story = [
   },
   {
     text: "🎁 Ciee Ciee ❤️",
-    video: "img/present1.mp4",
+    video: "img/Present1.mp4",
     choices: [
       {
         text: "🎁 Buka lagi!",
@@ -198,7 +198,7 @@ const story = [
   },
   {
     text: "🎁 Waduh, Masih ada? 👀",
-    video: "img/present2.mp4",
+    video: "img/Present2.mp4",
     choices: [
       {
         text: "🎁 Coba buka lagi!",
@@ -208,7 +208,7 @@ const story = [
   },
   {
     text: "🎁 Eits, masih ada lho!",
-    video: "img/present3.mp4",
+    video: "img/Present3.mp4",
     choices: [
       {
         text: "🎁 Lanjut bukaaa!",
@@ -218,7 +218,7 @@ const story = [
   },
   {
     text: "🎁 Kamu kira udah abis? 👀",
-    video: "img/present4.mp4",
+    video: "img/Present4.mp4",
     choices: [
       {
         text: "🎁 Buka cepet! ini spesial buat kamu lhoo ❤️",
@@ -228,7 +228,7 @@ const story = [
   },
   {
     text: "🎁 Tadaaa~ Hadiah spesial buat kamu! 🎊🎈",
-    video: "img/present5.mp4",
+    video: "img/Present5.mp4",
     choices: [
       {
         text: "🎁 Asikk Abiss Hadiahnya, Main lagi ngga?",
