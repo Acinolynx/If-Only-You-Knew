@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const story = [
   {
     text: "\n 🛏️ Kamu baru saja bangun. Mata masih berat. Rasanya malas buat bangun dari kasur. \n 📱 Kamu raih HP di samping bantal. Jam sudah agak siang. \n 👩🏻 Apa yang mau kamu lakukan?",
-    video: "img/sleepy.mp4",
+    video: "img/sleepy.webm",
     choices: [
       { text: "Cek notifikasi, siapa tahu ada yang inget...", nextText: 1 },
       { text: "Scroll FYP aja sambil rebahan...", nextText: 2 },
@@ -76,12 +76,12 @@ const story = [
   },
   {
     text: "\n 📱 Kamu membuka notifikasi… tapi kosong. Tidak ada pesan spesial, tidak ada kejutan. \n 👩🏻💭 'Yah… gak ada yang inget ya…' ",
-    video: "img/sweepy.mp4",
+    video: "img/sweepy.webm",
     choices: [{ text: "Yaudah, scroll FYP aja deh...", nextText: 2 }],
   },
   {
     text: "\n 📱 Jempolmu terus menggeser layar. Satu video, dua video, tiga video… semuanya tentang pasangan yang saling memberi kejutan. \n 💐 Ada yang dikasih bunga. \n 🎁 Ada yang dikasih kado di hari spesial. \n 🎂 Ada yang dirayakan ulang tahunnya dengan meriah. \n 💔 Kamu mendesah pelan. Rasanya sedikit nyesek.",
-    video: "img/Sed.mp4",
+    video: "img/Sed.webm",
     choices: [
       { text: "Huft… iri banget ya...", nextText: 3 },
       { text: "Yaudah lah… mungkin aku gak seistimewa itu.", nextText: 3 },
@@ -89,7 +89,7 @@ const story = [
   },
   {
     text: "\n 🔔 Tiba-tiba, HP-mu bergetar. Ada satu notifikasi baru dari nomor tidak dikenal. \n 📩 'Mainkan ini, buat kamu.' \n 🎮 Sebuah link. Game?",
-    video: "img/confused1.mp4",
+    video: "img/confused1.webm",
     choices: [
       { text: "Coba aja, siapa tahu menarik.", nextText: 4 },
       {
@@ -100,12 +100,12 @@ const story = [
   },
   {
     text: "\n 🎮 Kamu membuka game itu. Layarnya gelap sebentar, lalu muncul pesan pertama. \n 📜 'Kalau kamu tahu… ada yang selalu inget hari ini' ",
-    video: "img/O.mp4",
+    video: "img/O.webm",
     choices: [{ text: "Ehh... Apaan nih?...", nextText: 5 }],
   },
   {
     text: "\n 📜 'Kalau kamu tahu… ada yang selalu inget hari ini.' \n 📜 'Ada yang gak mau hari ini berlalu tanpa bilang sesuatu ke kamu.' \n 👩🏻💭 Kamu mengerutkan dahi...",
-    video: "img/huh.mp4",
+    video: "img/huh.webm",
     choices: [
       { text: "Siapa yaa?...", nextText: 6 },
       { text: "Kenapa rasanya familiar...", nextText: 6 },
@@ -113,7 +113,7 @@ const story = [
   },
   {
     text: "\n 🎂 'Selamat ulang tahun, sayang.' \n 📜 'Hari ini spesial. Bukan cuma karena angkanya berubah, tapi karena kamu ada di dunia ini.' \n  💖 'Dan buat aku, itu adalah sesuatu yang patut dirayakan.' ",
-    video: "img/sus.mp4",
+    video: "img/sus.webm",
     choices: [
       { text: "Aku gak nyangka ada yang inget...", nextText: 7 },
       { text: "Aku kira ngga ada yang peduli...", nextText: 7 },
@@ -121,7 +121,7 @@ const story = [
   },
   {
     text: "\n 📜 'Aku tahu... mungkin kamu gak selalu merasa dihargai.' \n 📜 'Mungkin ada hari-hari di mana kamu ngerasa sendirian.' \n 📜 'Tapi aku ingin kamu tahu, aku selalu ada di sini.'",
-    video: "img/lying.mp4",
+    video: "img/lying.webm",
     choices: [
       { text: "Ini apaan sih, tiba tiba banget...", nextText: 8 },
       { text: "Jujur, kadang aku ngerasa gitu sih...", nextText: 8 },
@@ -129,7 +129,7 @@ const story = [
   },
   {
     text: "\n 📜 'Kamu itu berharga.' \n 📜 'Gak peduli seberapa sering kamu ragu atau merasa gak cukup baik...' \n 📜 'Buat aku, kamu selalu cukup. Selalu lebih dari cukup.' \n 😌 Kamu menarik napas pelan. Jempolmu berhenti di atas layar.",
-    video: "img/Hihi.mp4",
+    video: "img/Hihi.webm",
     choices: [
       { text: "Kenapa kata-katanya bisa pas banget ya...", nextText: 9 },
       { text: "Aku gak tahu harus bilang apa...", nextText: 9 },
@@ -137,7 +137,7 @@ const story = [
   },
   {
     text: "\n 📜 'Aku sadar, aku gak selalu jadi yang terbaik.' \n 📜 'Kadang aku bikin kamu kesal, bikin kamu capek.' \n 📜 'Tapi aku mau kamu tahu, aku selalu berusaha. Karena aku sayang kamu.'",
-    video: "img/Puyenk.mp4",
+    video: "img/Puyenk.webm",
     choices: [
       { text: "Ya ampun, ini bikin aku mau nangis...", nextText: 10 },
       {
@@ -148,7 +148,7 @@ const story = [
   },
   {
     text: "\n 📜 'Aku gak mau kehilangan kamu.' \n 📜 'Mungkin aku gak selalu bisa ada di dekat kamu. Tapi aku gak mau kamu merasa sendiri.' \n 📜 'Aku ada di sini. Aku selalu ada untuk kamu.' \n 💖 'Dan aku harap... kamu tetap mau ada di sini juga.'",
-    video: "img/sideeye.mp4",
+    video: "img/sideeye.webm",
     choices: [
       { text: "Kamu bikin aku speechless, tau gak?", nextText: 11 },
       { text: "Kenapa ini berasa terlalu nyata...", nextText: 11 },
@@ -156,7 +156,7 @@ const story = [
   },
   {
     text: "\n 📜 'Aku tahu, kadang kita berantem. Kadang kita gak sepaham.' \n 📜 'Tapi itu bukan berarti aku gak peduli.' \n 📜 'Aku mau kita terus belajar bareng. Terus tumbuh bareng.'",
-    video: "img/sad.mp4",
+    video: "img/sad.webm",
     choices: [
       { text: "Aku juga gak pengen kehilangan kamu...", nextText: 12 },
       {
@@ -167,7 +167,7 @@ const story = [
   },
   {
     text: "\n 🎁 'Ini mungkin bukan hadiah besar.' \n 🎁 'Tapi aku ingin kamu tahu, setiap kata di sini tulus dari hatiku.' \n 🎁 'Dan kalau aku bisa memberi satu hal untuk kamu hari ini...' \n 🎁 '...Aku ingin kamu bahagia.'",
-    video: "img/happy.mp4",
+    video: "img/happy.webm",
     choices: [
       { text: "Ini lebih dari cukup buat aku...", nextText: 13 },
       { text: "Aku gak butuh apa-apa lagi, cukup kamu ada.", nextText: 13 },
@@ -175,7 +175,7 @@ const story = [
   },
   {
     text: "\n 🎉 'Selamat ulang tahun sekali lagi.' \n 🎉 'Aku harap hari ini penuh dengan senyum untuk kamu.' \n 🎉 'Dan kalau suatu saat kamu merasa sendirian lagi...' \n 🎉 'Buka game ini. Karena aku selalu ada di sini.' \n ❤️ Layar perlahan memudar, meninggalkan satu pesan terakhir:📜 'Aku sayang kamu.'",
-    video: "img/cry.mp4",
+    video: "img/cry.webm",
     choices: [
       { text: "Aku juga sayang kamu. Selalu.", nextText: 14 },
       { text: "Yuk, bareng-bareng terus ya...", nextText: 14 },
@@ -183,12 +183,12 @@ const story = [
   },
   {
     text: "💌\nHari ini bukan cuma ulang tahunmu.\nBukan cuma hari anniv kita (telat banget sih hehe).\nTapi hari di mana aku pengen bilang…\n\nTerima kasih.\nMaaf.\nDan... aku sayang kamu.\n\nTerus bertahan ya. Aku di sini, buat kamu. \n\n Ada hadiah lhoo <3 Buka hadiahnya!",
-    video: "img/flower.mp4",
+    video: "img/flower.webm",
     choices: [{ text: "🎁 Hehe, penasaran ya?", nextText: 15 }],
   },
   {
     text: "🎁 Ciee Ciee ❤️",
-    video: "img/Present1.mp4",
+    video: "img/Present1.webm",
     choices: [
       {
         text: "🎁 Buka lagi!",
@@ -198,7 +198,7 @@ const story = [
   },
   {
     text: "🎁 Waduh, Masih ada? 👀",
-    video: "img/Present2.mp4",
+    video: "img/Present2.webm",
     choices: [
       {
         text: "🎁 Coba buka lagi!",
@@ -208,7 +208,7 @@ const story = [
   },
   {
     text: "🎁 Eits, masih ada lho!",
-    video: "img/Present3.mp4",
+    video: "img/Present3.webm",
     choices: [
       {
         text: "🎁 Lanjut bukaaa!",
@@ -218,7 +218,7 @@ const story = [
   },
   {
     text: "🎁 Kamu kira udah abis? 👀",
-    video: "img/Present4.mp4",
+    video: "img/Present4.webm",
     choices: [
       {
         text: "🎁 Buka cepet! ini spesial buat kamu lhoo ❤️",
@@ -228,7 +228,7 @@ const story = [
   },
   {
     text: "🎁 Tadaaa~ Hadiah spesial buat kamu! 🎊🎈",
-    video: "img/Present5.mp4",
+    video: "img/Present5.webm",
     choices: [
       {
         text: "🎁 Asikk Abiss Hadiahnya, Main lagi ngga?",
@@ -329,7 +329,7 @@ function showTextNode(index) {
     choiceButtons.classList.remove("fade-out");
 
     // Ganti konten dengan scene baru
-    expressionGif.src = node.video || "img/default.mp4";
+    expressionGif.src = node.video || "img/default.webm";
     storyText.textContent = "";
     choiceButtons.innerHTML = "";
 
